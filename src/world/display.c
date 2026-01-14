@@ -36,6 +36,8 @@ void move(char key, Display* display)
 
 
 
+
+
 int main(void)
 {
     Display display = {256, 256, {128, 128}};
