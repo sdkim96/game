@@ -15,9 +15,9 @@ as it defines the tile types needed for rendering the view.
 #define VIEW_ENTITY_DOOR 'D'
 
 /* Interprets the tile type to a symbolic character for rendering. */
-char view_tile(TileType t);
+char view_tile(const TileType t);
 
 /* Interprets the entity type to a symbolic character for rendering. */
-char view_entity(EntityType t);
+char view_entity(const EntityType t);
 
 #endif // VIEW_H

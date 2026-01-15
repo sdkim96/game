@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "view.h"
 
-char view_tile(TileType t)
+char view_tile(const TileType t)
 {
     switch (t)
     {
@@ -10,7 +10,7 @@ char view_tile(TileType t)
     }
 }
 
-char view_entity(EntityType t)
+char view_entity(const EntityType t)
 {
     switch (t)
     {
