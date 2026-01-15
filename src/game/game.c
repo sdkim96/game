@@ -3,6 +3,8 @@
 #include <stdio.h>
 
 #include "game.h"
+#include "../world/world.h"
+#include "../engine/engine.h"
 
 Game* initialize_game()
 {
@@ -13,7 +15,11 @@ Game* initialize_game()
 void run(Game* game)
 {
     printf("Game '%s' is running...\n", game->name);
-    // Game loop would go here.
+    
+    int ch;
+    ch = getchar();
+
+    move(ch, )
 
     return;
 }

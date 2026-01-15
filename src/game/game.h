@@ -1,5 +1,8 @@
 typedef struct Game {
     char name[50];
+    
+    Engine* engine;
+    World* world;
 } Game;
 
 Game* initialize_game();
