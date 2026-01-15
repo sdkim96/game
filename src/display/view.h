@@ -1,12 +1,12 @@
-#ifndef VIEW_H
-#define VIEW_H
+#ifndef DISPLAY_VIEW_H
+#define DISPLAY_VIEW_H
 
 /*
 The following statement intentionally includes world/map.h,
 as it defines the tile types needed for rendering the view.
 */ 
-#include "map.h" 
-#include "entity_view.h"
+#include "world/map.h" 
+#include "entity/entity_view.h"
 
 #define VIEW_TILE_WALL '#'
 #define VIEW_TILE_EMPTY ' '
@@ -20,4 +20,4 @@ char view_tile(const TileType t);
 /* Interprets the entity type to a symbolic character for rendering. */
 char view_entity(const EntityType t);
 
-#endif // VIEW_H
+#endif /* DISPLAY_VIEW_H */

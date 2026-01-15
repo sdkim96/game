@@ -1,8 +1,10 @@
-#ifndef DISPLAY_H
-#define DISPLAY_H
+#ifndef DISPLAY_DISPLAY_H
+#define DISPLAY_DISPLAY_H
 
-#include "world.h"
-#include "entity_view.h"
+#include "world/world.h"
+#include "entity/entity_view.h"
+#include "display/view.h"
+#include "display/console.h"
 
 void render_display(
     const World* world, 
@@ -10,4 +12,4 @@ void render_display(
     const int entity_count
 );
 
-#endif // DISPLAY_H
+#endif /* DISPLAY_DISPLAY_H */

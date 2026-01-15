@@ -1,8 +1,8 @@
-#ifndef MAP_H
-#define MAP_H
+#ifndef WORLD_MAP_H
+#define WORLD_MAP_H
 
-#define MAP_H 80
-#define MAP_W 20
+#define MAP_H 20
+#define MAP_W 80
 
 #define IS_BORDER(x, y) ((x) == 0 || (x) == MAP_W - 1 || (y) == 0 || (y) == MAP_H - 1)
 
@@ -34,7 +34,7 @@ Parameters:
     s - pointer to Screen buffer
     y - vertical coordinate
     x - horizontal coordinate
-    ch - character to draw.
+    t - tile type to draw.
 
 Returns:
     0 on success,
@@ -45,6 +45,6 @@ You must note that this function could be malfunctioning if you don't call the d
 as this function assumes the boundary and empty spaces are already set up in the screen buffer.
 
 */
-int draw_map(Map* m, int y, int x, char c);
+int draw_map(Map* m, int y, int x, TileType t);
 
-#endif // MAP_H
+#endif /* WORLD_MAP_H */ 

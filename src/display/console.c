@@ -1,9 +1,20 @@
+#include <stdio.h>
 #include "console.h"
 
-void display_to_console(const Point* points, const int point_count)
+void display_to_console(
+    const Point* points, 
+    const int max_h,
+    const int max_w
+)
 {
-    for (int i = 0; i < point_count; i++)
+    int y;
+    int x;
+    for (y = 0; y < max_h; y++)
     {
-        putchar(points[i].symbol);
+        for (x = 0; x < max_w; x++)
+        {
+            putchar(points[y * max_w + x].symbol);
+        }
+        putchar('\n');
     }
 }

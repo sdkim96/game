@@ -15,4 +15,4 @@ typedef struct EntityView {
     int y_pos;
 } EntityView;
 
-#endif // ENTITY_VIEW_H
+#endif /* ENTITY_VIEW_H */ 

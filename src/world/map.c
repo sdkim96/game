@@ -3,9 +3,11 @@
 
 void initialize_map(Map* m)
 {
-    for (int y=0; y < MAP_H; y++)
+    int y;
+    int x;
+    for (y = 0; y < MAP_H; y++)
     {
-        for (int x=0; x < MAP_W; x++)
+        for (x = 0; x < MAP_W; x++)
         {
             if (IS_BORDER(x, y))
             {
@@ -24,12 +26,12 @@ int draw_map(Map* m, int y, int x, TileType t)
 {
     if (IS_BORDER(x, y))
     {
-        return -2; // out of bounds
+        return -2; /* out of bounds */
     }
     if (m->tiles[y][x] == TILE_EMPTY)
     {
         m->tiles[y][x] = t;
-        return 0; // success
+        return 0; /* success */
     }
-    return -1; // position occupied
+    return -1; /* position occupied */ 
 }
