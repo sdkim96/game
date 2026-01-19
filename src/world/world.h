@@ -7,4 +7,6 @@ typedef struct World {
     Map* map;
 } World;
 
+
+
 #endif /* WORLD_WORLD_H */

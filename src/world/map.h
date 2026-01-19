@@ -8,7 +8,8 @@
 
 typedef enum {
     TILE_WALL,
-    TILE_EMPTY
+    TILE_EMPTY,
+    TILE_THORN
 } TileType;      
 
 typedef struct Map {
@@ -23,26 +24,25 @@ This function populates the map buffer with:
     - wall enum (TILE_WALL) on the borders.
     - empty enum (TILE_EMPTY) on the inner area.
 
-Note that the main purpose is not printing; 
-it is to prepare draw functions to populate the map buffer.
+Note that the main purpose is not printing; preparing draw functions to populate the map buffer.
 */
 void initialize_map(Map* m);
 
-/* Fills the screen buffer at given coordinates with the player character.
+/* Fills the map buffer with the tiles at the given coordinates.
 
 Parameters:
-    s - pointer to Screen buffer
+    m - pointer to map buffer
     y - vertical coordinate
     x - horizontal coordinate
     t - tile type to draw.
 
 Returns:
     0 on success,
-   -1 if the position is already occupied (not BG_EMPTY),
+   -1 if the position is already occupied (not TILE_EMPTY),
    -2 if the coordinates are out of bounds.
 
 You must note that this function could be malfunctioning if you don't call the draw_background function first,
-as this function assumes the boundary and empty spaces are already set up in the screen buffer.
+as this function assumes the boundary and empty spaces are already set up in the map buffer.
 
 */
 int draw_map(Map* m, int y, int x, TileType t);
