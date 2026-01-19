@@ -1,8 +1,10 @@
 #ifndef GAME_GAME_C
 #define GAME_GAME_C
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "game.h"
+#include "../input/input.h"
 #include "../world/world.h"
 #include "../engine/engine.h"
 
@@ -15,11 +17,11 @@ Game* initialize_game()
 void run(Game* game)
 {
     printf("Game '%s' is running...\n", game->name);
+    FILE* input = stdin;
+    Command cmd = translate_to_command(get_input_char(input));
     
-    int ch;
-    ch = getchar();
 
-    move(ch, )
+    
 
     return;
 }
