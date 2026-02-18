@@ -1,12 +1,10 @@
 #ifndef WORLD_WORLD_H
 #define WORLD_WORLD_H
 
-#include "world/map.h"
+#include "core/map.h"
+#include "core/command.h"
+#include "core/gamestate.h"
 
-typedef struct World {
-    Map* map;
-} World;
-
-
+void create_world_artifact(Command cmd, GameState* state);
 
 #endif /* WORLD_WORLD_H */

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "map.h"
+#include "core/map.h"
 
 void initialize_map(Map* m)
 {

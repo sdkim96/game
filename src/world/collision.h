@@ -1,9 +1,8 @@
-#ifndef WORLD_MOVE_H
-#define WORLD_MOVE_H
+#ifndef WORLD_COLLISION_H
+#define WORLD_COLLISION_H
 
 #include "core/world.h"
 #include "core/move.h"
-#include "core/interaction.h"
 
 /* Checks if the player entity can move in the specified direction.
 
@@ -31,4 +30,4 @@ Returns:
 */
 int can_entity_interact(World* world, Entity* actor, Move move);
 
-#endif /* WORLD_MOVE_H */
+#endif /* WORLD_COLLISION_H */
